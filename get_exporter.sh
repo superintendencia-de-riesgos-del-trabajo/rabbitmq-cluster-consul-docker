@@ -8,7 +8,7 @@ cd /opt/rabbitmq/plugins
 readonly base_url='https://github.com/deadtrickster/prometheus_rabbitmq_exporter/releases/download/v3.7.9.1'
 
 apk add --update \
-    curl \
+    curl erlang-tools \
     && rm -rf /var/cache/apk/*
 
 get() {
