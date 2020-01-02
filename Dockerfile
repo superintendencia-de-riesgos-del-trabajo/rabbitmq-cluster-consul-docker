@@ -1,4 +1,4 @@
-FROM rabbitmq:3.7.23-management-alpine
+FROM rabbitmq:3.8.0-management-alpine
 LABEL description="RabbitMQ Autocluster" \
       maintainer="SRT <desaadmin@srt.gob.ar>"
 
@@ -8,4 +8,4 @@ COPY ./get_exporter.sh /get_exporter.sh
 RUN chmod +x ./get_exporter.sh
 RUN ./get_exporter.sh
 
-RUN rabbitmq-plugins --offline enable rabbitmq_peer_discovery_consul prometheus_rabbitmq_exporter
+RUN rabbitmq-plugins --offline enable rabbitmq_peer_discovery_consul rabbitmq_prometheus 
