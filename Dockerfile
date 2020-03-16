@@ -1,4 +1,4 @@
-FROM rabbitmq:3.8.2-management-alpine
+FROM rabbitmq:3.8.3-management-alpine
 LABEL description="RabbitMQ Autocluster" \
       maintainer="SRT <desaadmin@srt.gob.ar>"
 
